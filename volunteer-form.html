@@ -1,0 +1,84 @@
+  <div class="volunteer-form">
+    <h3>CONTACT INFORMATION</h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="fname" class="sr-only">First Name</label>
+          [text* fname id:fname class:form-control placeholder "First Name"]
+        </div>
+        <div class="form-group">
+          <label for="lname" class="sr-only">Last Name</label>
+          [text* lname id:lname class:form-control placeholder "Last Name"]
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="email" class="sr-only">E-Mail</label>
+          [text* email id:email class:form-control placeholder "E-Mail"]
+        </div>
+        <div class="form-group">
+          <label for="phone" class="sr-only">Phone</label>
+          [text* phone id:phone class:form-control placeholder "Phone"]
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-push-6">
+        <div class="checkbox">
+          [checkbox subscribe use_label_element "Yes, I would like to subscribe to the SPCA's monthly newsletter."]
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-pull-6">
+        <div class="form-group">
+          <label for="address1" class="sr-only">Street Address</label>
+          [text address1 id:address1 class:form-control placeholder "Street Address"]
+        </div>
+        <div class="form-group">
+          <label for="address2" class="sr-only">Street Address 2</label>
+          [text address2 id:address2 class:form-control placeholder "Street Address 2"]
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="city" class="sr-only">City</label>
+          [text city id:city class:form-control placeholder "City"]
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="zip" class="sr-only">Zip</label>
+          [text zip id:zip class:form-control placeholder "Zip"]
+        </div>
+      </div>
+    </div>
+    <h3 style="margin-top:40px;">AVAILABILITY</h3>
+    <div class="availability">
+      <div class="checkbox">
+        [checkbox availability use_label_element "MON"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "TUE"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "WED"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "THU"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "FRI"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "SAT"]
+      </div>
+      <div class="checkbox">
+        [checkbox availability use_label_element "SUN"]
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:25px;">We will contact you with the times we have available.</p>
+    <p class="btn-spca btn-blue">
+      [submit "I Want To Start!"]
+    </p>
+  </div>
