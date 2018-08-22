@@ -21,7 +21,7 @@ body{
   font-family:Sen, sans-serif;
   font-size:18px;
   color:#345284;
-  padding-top:133px;
+  padding-top:91px;
 }
 h1{
   font-size:49px;
@@ -75,6 +75,7 @@ input[type="submit"].btn-spca{
   color:#fff;
   text-decoration:none;
   font-weight:bold;
+  display:inline-block;
 }
 .btn-spca>input[type="submit"]{
   border:none;
@@ -138,9 +139,10 @@ img.alignleft{
   margin-right:20px;
 }
 
-nav{
+nav.navbar-fixed-top{
   background-color:#fff;
   padding-top:20px;
+  min-height:105px;
 }
 .logo>img{
   float:left;
@@ -206,7 +208,7 @@ nav{
 .hero.homepage{
   height:495px;
   width:100%;
-  display:table;
+  display:block;
 }
 .hero.hero-split{
   height:auto;
@@ -1025,7 +1027,10 @@ blockquote{
 
 @media (max-width:767px){
   body{
-    padding-top:211px;
+    padding-top:85px;
+  }
+  nav.navbar-fixed-top{
+    min-height:115px;
   }
   .navbar-toggle:before{
     left:-2px;

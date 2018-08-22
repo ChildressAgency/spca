@@ -60,6 +60,7 @@
           */
         ?>
       </div>
+    </nav>
       <div class="sub-nav">
         <div class="container">
           <ul class="nav nav-justify">
@@ -71,4 +72,3 @@
           </ul>
         </div>
       </div>
-    </nav>
