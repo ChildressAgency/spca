@@ -11,7 +11,9 @@
                     <?php if(get_sub_field('slide_caption_image')): ?>
                       <img src="<?php the_sub_field('slide_caption_image'); ?>" class="img-responsive center-block" alt="" />
                     <?php endif; ?>
-                    <h2><?php the_sub_field('slide_caption'); ?></h2>
+                    <?php if(get_sub_field('slide_caption')): ?>
+                      <h2><?php the_sub_field('slide_caption'); ?></h2>
+                    <?php endif; ?>
                     <?php if(get_sub_field('slide_link')): ?>
                       <p class="btn-spca btn-grey">
                         <a href="<?php the_sub_field('slide_link'); ?>"><?php the_sub_field('slide_link_text'); ?></a>
