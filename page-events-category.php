@@ -169,7 +169,7 @@
         </div>
       </div>
       <p class="btn-spca btn-blue">
-        <a href="#">
+        <a style="cursor:pointer;">
           <span class="has-spinner">View More <span class="spinner"><i class="glyphicon glyphicon-refresh gly-spin"></i></span></span>
         </a>
       </p>

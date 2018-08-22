@@ -9,6 +9,10 @@
     <?php endif; ?>
     <div class="main">
       <div class="container">
+        <h3 style=margin-top:40px;">Our Mission...</h3>
+        <?php the_field('mission_content'); ?>
+        <h3>Our Vision...</h3>
+        <?php the_field('vision_content'); ?>
         <div class="row">
           <div class="col-sm-5 mt40 text-right">
             <h3 style="margin-bottom:25px;">Who We Are...</h3>

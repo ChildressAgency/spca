@@ -9,10 +9,6 @@
     $info = curl_getinfo($ch);
     curl_close($ch);
     
-    //echo $output;
-    $pets = $output->getElementsByTagName('tr');
-    foreach($pets as $pet){
-      
-    }
+    echo $output;
   ?>
 <?php get_footer(); ?>

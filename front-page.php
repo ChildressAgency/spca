@@ -219,12 +219,6 @@
               <?php endwhile; endif; ?>
             <?php endif; ?>
         </div> 
-        <div class="view-all-pets">
-          <h2>We Have More Furry Friends!</h2>
-          <p class="btn-spca btn-blue">
-            <a href="<?php echo home_url('adopt-a-pet'); ?>">View All Animals</a>
-          </p>
-        </div>
       </div>
     </div>
   

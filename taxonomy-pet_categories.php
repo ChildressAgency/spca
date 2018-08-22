@@ -35,7 +35,7 @@
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $query_args = array(
           'post_type' => 'pets',
-          'posts_per_page' => 6,
+          //'posts_per_page' => 6,
           'paged' => $paged,
           'tax_query' => array(
             array(
@@ -89,7 +89,7 @@
         <div class="view-all-pets">
           <h2>We Have More Furry Friends!</h2>
           <p class="btn-spca btn-blue">
-            <a href="#">
+            <a style="cursor:pointer;">
               <span class="has-spinner">View More <span class="spinner"><i class="glyphicon glyphicon-refresh gly-spin"></i></span></span>
             </a>
           </p>

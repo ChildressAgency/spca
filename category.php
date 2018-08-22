@@ -104,7 +104,16 @@
             <div class="page" id="p<?php echo $paged; ?>">
               <?php while(have_posts()) : the_post(); ?>
                 <?php if($i > 0): ?>
-                  <?php if($i%3 == 0){ echo '<div class="clearfix"></div>'; } ?>
+                  <?php 
+                  if($i<5){ 
+                    if($i%4==0){
+                      echo '<div class="clearfix"></div>'; 
+                    }
+                  }
+                  else if(($i-1)%3==0){
+                    echo '<div class="clearfix"></div>';
+                  }
+                  ?>
                   <div class="col-sm-4 mt40">
                     <div class="feature-block">
                       <h2><?php the_title(); ?></h2>
@@ -159,7 +168,7 @@
         </div>
       </div>
       <p class="btn-spca btn-blue">
-        <a href="#">
+        <a style="cursor:pointer;">
           <span class="has-spinner">View More <span class="spinner"><i class="glyphicon glyphicon-refresh gly-spin"></i></span></span>
         </a>
       </p>

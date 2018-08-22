@@ -78,14 +78,15 @@
         <div class="row" id="posts">
           <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $ppp = (get_query_var('paged')) ? 6 : 7;
+            //$ppp = (get_query_var('paged')) ? 6 : 7;
+			$ppp = ($paged == 1) ? 7 : 6;
             $query = new WP_Query(array('posts_per_page' => $ppp, 'paged' => $paged));
             
-            if($query->have_posts()) : 
+            if(have_posts()) : 
               $i = 0;
           ?>
             <div class="page" id="p<?php echo $paged; ?>">
-              <?php while($query->have_posts()) : $query->the_post(); ?>
+              <?php while(have_posts()) : the_post(); ?>
                 <?php if($i > 0): ?>
                   <?php 
                   if($i<5){
@@ -93,7 +94,7 @@
                       echo '<div class="clearfix"></div>'; 
                     }
                   }
-                  else if($i%3 == 0){
+                  else if(($i-1)%3 == 0){
                     echo '<div class="clearfix"></div>';
                   }
                   ?>

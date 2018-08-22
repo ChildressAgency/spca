@@ -291,7 +291,7 @@ function spca_create_post_type(){
     'public' => true,
     'menu_position' => 5.1,
     'query_var' => 'events',
-    'supports' => array('title', 'editor', 'custom_fields')
+    'supports' => array('title', 'editor', 'custom_fields', 'author')
   );
   register_post_type('events', $events_args);
 }

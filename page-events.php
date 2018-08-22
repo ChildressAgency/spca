@@ -15,6 +15,7 @@
           <div class="col-sm-8">
             <?php
               $home_page_id = 6;
+              $post_not_in = array();
               if(get_field('featured_blog_post', $home_page_id)){
                 $featured_blog_id = get_field('featured_blog_post', $home_page_id);
                 if(get_post_type($featured_blog_id) == 'events'){
@@ -84,7 +85,9 @@
                 </div>
               </div>
             </div>
-            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php endwhile; else: ?>
+              <p>We don't currently have any upcoming events.  Please check back soon.</p>
+            <?php endif; wp_reset_postdata(); ?>
           </div>
           <div class="col-sm-4 border-left">
             <?php get_template_part('custom-sidebar'); ?>
@@ -114,7 +117,7 @@
                       echo '<div class="clearfix"></div>'; 
                     }
                   }
-                  else if($i%3 == 0){
+                  elseif(($i-1)%3 == 0){
                     echo '<div class="clearfix"></div>';
                   }
                   ?>
@@ -172,7 +175,7 @@
         </div>
       </div>
       <p class="btn-spca btn-blue">
-        <a href="#">
+        <a style="cursor:pointer;">
           <span class="has-spinner">View More <span class="spinner"><i class="glyphicon glyphicon-refresh gly-spin"></i></span></span>
         </a>
       </p>
