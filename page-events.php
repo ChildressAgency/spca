@@ -12,7 +12,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <?php
               $home_page_id = 6;
               $post_not_in = array();
@@ -88,9 +88,6 @@
             <?php endwhile; else: ?>
               <p>We don't currently have any upcoming events.  Please check back soon.</p>
             <?php endif; wp_reset_postdata(); ?>
-          </div>
-          <div class="col-sm-4 border-left">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
         <div class="row" id="posts">

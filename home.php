@@ -10,7 +10,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <?php
               $featured_blog_args = array(
                 'posts_per_page' => 1,
@@ -58,9 +58,6 @@
               </div>
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
-          </div>
-          <div class="col-sm-4 border-left">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
         <div class="category-nav">

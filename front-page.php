@@ -56,7 +56,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <div class="blog-feature">
               <?php
                 if(get_field('featured_blog_post')){
@@ -122,9 +122,6 @@
               </div>
               <?php endwhile; endif; wp_reset_postdata(); ?>
             </div>
-          </div>
-          <div class="col-sm-4 border-left">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
       </div>
