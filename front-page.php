@@ -11,7 +11,9 @@
                     <?php if(get_sub_field('slide_caption_image')): ?>
                       <img src="<?php the_sub_field('slide_caption_image'); ?>" class="img-responsive center-block" alt="" />
                     <?php endif; ?>
-                    <h2><?php the_sub_field('slide_caption'); ?></h2>
+                    <?php if(get_sub_field('slide_caption')): ?>
+                      <h2><?php the_sub_field('slide_caption'); ?></h2>
+                    <?php endif; ?>
                     <?php if(get_sub_field('slide_link')): ?>
                       <p class="btn-spca btn-grey">
                         <a href="<?php the_sub_field('slide_link'); ?>"><?php the_sub_field('slide_link_text'); ?></a>
@@ -56,7 +58,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <div class="blog-feature">
               <?php
                 if(get_field('featured_blog_post')){
@@ -122,9 +124,6 @@
               </div>
               <?php endwhile; endif; wp_reset_postdata(); ?>
             </div>
-          </div>
-          <div class="col-sm-4 border-left">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
       </div>
@@ -219,12 +218,6 @@
               <?php endwhile; endif; ?>
             <?php endif; ?>
         </div> 
-        <div class="view-all-pets">
-          <h2>We Have More Furry Friends!</h2>
-          <p class="btn-spca btn-blue">
-            <a href="<?php echo home_url('adopt-a-pet'); ?>">View All Animals</a>
-          </p>
-        </div>
       </div>
     </div>
   

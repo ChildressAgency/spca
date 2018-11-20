@@ -24,7 +24,7 @@
             <div class="col-sm-5">
               <?php the_field('about_us_tagline', 'option'); ?>
               <p class="btn-spca btn-white">
-                <a href="<?php echo home_url('about-us'); ?>">About Us</a>
+                <a href="<?php echo home_url('whoweare'); ?>">About Us</a>
               </p>
             </div>
             <div class="col-sm-2">
@@ -38,8 +38,11 @@
                 <a href="<?php the_field('facebook', 'option'); ?>" class="facebook"></a>
                 <a href="<?php the_field('twitter', 'option'); ?>" class="twitter"></a>
                 <a href="<?php the_field('instagram', 'option'); ?>" class="instagram"></a>
-                <a href="<?php the_field('linkedin', 'option'); ?>" class="linkedin"></a>
-                <a href="<?php the_field('google_plus', 'option'); ?>" class="google-plus"></a>
+                <?php if(get_field('linkedin', 'option')): ?>
+	                <a href="<?php the_field('linkedin', 'option'); ?>" class="linkedin"></a>
+	        <?php endif; if(get_field('google_plus', 'option')): ?>
+	                <a href="<?php the_field('google_plus', 'option'); ?>" class="google-plus"></a>
+	        <?php endif; ?>
               </div>
               <p class="btn-spca btn-white">
                 <a href="<?php echo home_url('contact-us'); ?>">Contact Us</a>
@@ -54,10 +57,24 @@
             <div class="col-sm-5">
               <div class="contact-phone">
                 <h2>Contact</h2>
-                <p><?php the_field('phone_number', 'option'); ?></p>
-                <h2>Donate</h2>
+		<br>
+		<font color="2EC4B6">
+		<h3>10819 Courthouse Road</h3>
+		<h3>Fredericksburg, Virginia 22408</h3>
+		<h3>(540) 898-1500 (Phone)</h3>
+		<h3>(540) 898-1583 (Fax)</h3>
+		</font>
+		<br>
+		<br>
+		<h2>Donate</h2>
+		<br>
+		<font color="2EC4B6">
+                <h3>CFC - 63530 | CVC - 3625</h3>
+		<h3>Local Government - 7411</h3>
+		</font>
                 <p><?php the_field('donation_phone_number', 'option'); ?></p>
               </div>
+              <p style="margin-top:40px; text-align:center;">website created by <a href="https://childressagency.com">The Childress Agency</a></p>
             </div>
           </div>
         </div>

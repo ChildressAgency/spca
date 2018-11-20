@@ -1,4 +1,11 @@
 <?php
+
+add_action('wp_footer', 'show_template');
+function show_template() {
+	global $template;
+	print_r($template);
+}
+
 add_action('wp_enqueue_scripts', 'jquery_cdn');
 function jquery_cdn(){
   if(!is_admin()){
@@ -291,7 +298,7 @@ function spca_create_post_type(){
     'public' => true,
     'menu_position' => 5.1,
     'query_var' => 'events',
-    'supports' => array('title', 'editor', 'custom_fields')
+    'supports' => array('title', 'editor', 'custom_fields', 'author')
   );
   register_post_type('events', $events_args);
 }

@@ -9,7 +9,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <div class="row icon-row">
               <div class="col-sm-4 border-right">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/walk-icon.png" class="img-responsive center-block" alt="" />
@@ -42,9 +42,6 @@
             </div>
             <br />
             <br />
-          </div>
-          <div class="col-sm-4">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
       </div>

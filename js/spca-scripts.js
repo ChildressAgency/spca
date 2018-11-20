@@ -43,4 +43,28 @@ jQuery(document).ready(function($){
     }
   //jQuery(document.body).trigger( 'post-load');
   });
+
+  //pet search
+  var searchUrl = 'https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimals.aspx?';
+  var searchQueryString = '&css=http://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=u4bl4npb2mnkueh85ho8spw5veybpsxa2ytshcoiuoynukq2ah&location=&site=&onhold=A&orderby=ID&recAmount=&detailsInPopup=No&featuredPet=Include&stageID=';
+  var viewportWidth = $(window).width();
+  console.log(viewportWidth);
+  //var iframeWidth = document.getElementById('petSearchResults').clientWidth;
+  var colNum = '&colnum=3';
+
+  $('#searchPets').on('click', function(e){
+    e.preventDefault();
+    var searchVal = '';
+    searchVal += 'species=' + $('#species').val();
+    searchVal += '&agegroup=' + $('#ageGroup').val();
+    searchVal += '&gender=' + $('#gender').val();
+
+    if(viewportWidth <= 767){
+      colNum = '&colnum=2';
+    }
+
+    searchVal += colNum;
+
+    $('#petSearchResults').attr('src', searchUrl + searchVal + searchQueryString);
+  });
 });

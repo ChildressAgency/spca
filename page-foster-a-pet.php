@@ -49,6 +49,9 @@
               <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
                 ADDTOANY_SHARE_SAVE_KIT( array( 'use_current_page' => true ) );
               } ?>
+		<br>
+		<br>
+		<br>
             </div>
           </div>
           <div class="col-sm-4">

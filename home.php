@@ -10,7 +10,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <?php
               $featured_blog_args = array(
                 'posts_per_page' => 1,
@@ -59,9 +59,6 @@
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
           </div>
-          <div class="col-sm-4 border-left">
-            <?php get_template_part('custom-sidebar'); ?>
-          </div>
         </div>
         <div class="category-nav">
           <p>SELECT A CATEGORY</p>
@@ -78,14 +75,15 @@
         <div class="row" id="posts">
           <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $ppp = (get_query_var('paged')) ? 6 : 7;
+            //$ppp = (get_query_var('paged')) ? 6 : 7;
+			$ppp = ($paged == 1) ? 7 : 6;
             $query = new WP_Query(array('posts_per_page' => $ppp, 'paged' => $paged));
             
-            if($query->have_posts()) : 
+            if(have_posts()) : 
               $i = 0;
           ?>
             <div class="page" id="p<?php echo $paged; ?>">
-              <?php while($query->have_posts()) : $query->the_post(); ?>
+              <?php while(have_posts()) : the_post(); ?>
                 <?php if($i > 0): ?>
                   <?php 
                   if($i<5){
@@ -93,7 +91,7 @@
                       echo '<div class="clearfix"></div>'; 
                     }
                   }
-                  else if($i%3 == 0){
+                  else if(($i-1)%3 == 0){
                     echo '<div class="clearfix"></div>';
                   }
                   ?>

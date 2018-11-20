@@ -60,13 +60,15 @@
           */
         ?>
       </div>
+    </nav>
       <div class="sub-nav">
         <div class="container">
           <ul class="nav nav-justify">
-            <li><a href="<?php echo home_url('adopt-a-pet'); ?>">ADOPT</a></li>
+            <li><a href="<?php echo home_url('adopt'); ?>">ADOPT</a></li>
             <li class="bluebar"><a href="<?php echo home_url('donate'); ?>">DONATE</a></li>
-            <li><a href="<?php echo home_url('volunteer'); ?>">VOLUNTEER</a></li>
+            <li><a href="<?php echo home_url('foster'); ?>">FOSTER</a></li>
+            <li class="bluebar"><a href="<?php echo home_url('volunteer'); ?>">VOLUNTEER</a></li>
+            <li><a href="<?php echo home_url('events'); ?>">EVENTS</a></li>
           </ul>
         </div>
       </div>
-    </nav>

@@ -9,7 +9,7 @@
     <div class="main">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
             <div class="content">
               <div class="contact-info">
@@ -36,9 +36,6 @@
                 ADDTOANY_SHARE_SAVE_KIT( array( 'use_current_page' => true ) );
               } ?>
             </div>
-          </div>
-          <div class="col-sm-4">
-            <?php get_template_part('custom-sidebar'); ?>
           </div>
         </div>
       </div>
